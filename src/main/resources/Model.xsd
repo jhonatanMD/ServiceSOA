@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.ServicioSOA.com/api/soa/Model"
+	xmlns:tns="http://www.ServicioSOA.com/api/soa/Model"
+	elementFormDefault="qualified">
+	
+
+  <xs:complexType name="modelCliente">
+    <xs:sequence>
+      <xs:element name="dni" type="xs:string"/>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="clientes" type="tns:modelPersona" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+
+  <xs:complexType name="modelPersona" >
+    <xs:sequence>
+      <xs:element name="dni" type="xs:string"/>
+      <xs:element name="nombre" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

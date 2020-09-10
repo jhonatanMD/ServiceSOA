@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.ServicioSOA.com/api/soa/Client"
+	xmlns:tns="http://www.ServicioSOA.com/api/soa/Client"
+	elementFormDefault="qualified">
+
+
+
+	<xsd:element name="ClientRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="name" type="xsd:string" />
+				<xsd:element name="lastname" type="xsd:string" />
+				<xsd:element name="age" type="xsd:int" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="ClientResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="nameAll" type="xsd:string"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>
